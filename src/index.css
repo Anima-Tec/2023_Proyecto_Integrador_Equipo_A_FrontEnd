@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=Urbanist:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --pFontSize: 18px;
+    --federalBlue: #01166E;
+    --neonBlue: #1E65FF;
+    --franceBlue: #3C85DB;
+    --celestialBlue: #0497E9;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#root p {
+    font-size: var(--pFontSize);
+    font-family: 'Urbanist', sans-serif;
+    font-weight: lighter;
+    color: black;
+}
+#root h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: lighter;
+}
+#root h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.50rem;
+    font-weight: lighter;
+}
