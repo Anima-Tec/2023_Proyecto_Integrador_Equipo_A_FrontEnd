@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=Urbanist:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+header {
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    height: 5rem;
+}
+
+.headerLogoContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--franceBlue);
+    flex: 0 0 auto;
+}
+
+.headerContainer {
+    background-color: var(--franceBlue);
+    margin-right: 2rem;
+}
+
+.headerContainer {
+    font-family: 'Urbanist', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-button {
+    font-size: var(--pFontSize);
+    font-family: 'Urbanist', sans-serif;
+    font-weight: bold;
+    background-color: var(--federalBlue);
+    color: #fff;
+    margin-left: 2rem;
+    width: 6rem;
+    height: 3rem;
+    border-width: 0;
+    border-radius: 0.5rem;
+}
+
+.login-button:hover {
+    background-color: var(--federalBlue);
+}
+
+.linea {
+    width: 0.1px;
+    background-color: white;
+    height: 3rem;
+
+}
+
+.nav-button {
+    font-size: var(--pFontSize);
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    margin-right: 2rem;
+}
+
+.headerLinks {
+    display: flex;
+}
