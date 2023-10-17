@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=Urbanist:wght@500&display=swap');
+.textAccInp{
+    border-style: none;
+    width: 20rem;
+    background-color: #D9D9D9;
+    height: 2rem;
+}
+#userInp{
+    margin-bottom: 0.5rem;
+}
+.loginContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.loginContainer *{
+    margin-bottom: 1rem;
+}
+#frgPass {
+    font-family: 'Urbanist', sans-serif;
+    color: #fff;
+}
+#frgPass:hover {
+    color: #3C85DB;
+}

@@ -1,0 +1,23 @@
+.loginContainer{
+    font-size: 16px;
+    display: flex;
+    flex: 1 0 auto;
+    padding-bottom: 65%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .loginContainer {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .loginContainer{
+        width: clamp(15rem, 30vw, 25rem); 
+    }
+    
+}
