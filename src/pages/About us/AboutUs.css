@@ -1,0 +1,83 @@
+.about-us {
+  flex: 1;
+  color: white;
+}
+
+.about-us {
+  flex: 1;
+  color: white;
+}
+
+.empty-blue {
+  flex: 1;
+  height: 6rem;
+  background-color: var(--franceBlue);
+  border-bottom-left-radius: 5rem;
+  border: 0 solid white;
+  border-top-width: 1px;
+}
+
+.image-text-aboutus {
+  display: flex;
+}
+
+.titulo-aboutus {
+  display: flex;
+  justify-content: center;
+  width: 29rem;
+  align-items: center;
+}
+
+.titulo-aboutus > h1 {
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.titulo-aboutus > h1 > span {
+  color: var(--celestialBlue);
+}
+
+.aboutus-text-title {
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 25px;
+  margin-top: 3rem;
+}
+
+.aboutus-text-content {
+  flex: 1;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 20px;
+  margin: 2rem 3rem 2rem 3rem;
+}
+
+.aboutus-image-text-black,
+.aboutus-image-text-blue {
+  width: 100%;
+  display: flex;
+}
+
+.aboutus-image-text-blue {
+  background-color: var(--franceBlue);
+}
+
+.aboutus-image-text-black {
+  background-color: black;
+}
+
+.aboutus-image {
+  flex: 1;
+}
+
+.aboutus-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.aboutus-desc {
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: var(--pFontSize);
+  margin: 4rem 7.5rem 4rem 7.5rem;
+}

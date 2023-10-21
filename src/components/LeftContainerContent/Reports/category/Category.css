@@ -1,0 +1,26 @@
+.category-container {
+  width: 100%;
+  height: calc(100% - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.category {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: start;
+  height: 3.5rem;
+}
+
+.category > span:hover {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--franceBlue);
+}

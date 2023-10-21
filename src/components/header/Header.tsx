@@ -1,26 +1,87 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import Button from '../utils/button/Button.js';
-import Logo from '../utils/logo/wide/wideLogo.js'
-import './Header.css'
-const Header = (props: any) => {
+import React, { useContext } from "react";
+import Button from "../utils/button/PageNavButton/PageNavButton";
+import WideLogo from "../utils/logo/wide/WideLogo";
+import LoginButton from "../utils/button/AccessButton/AccessButton";
+import "./Header.css";
+import NarrowLogo from "../utils/logo/narrow/NarrowLogo";
+import { SessionContext } from "../../context/SessionContext";
+
+interface ElementosComunesProps {
+  isWide: boolean;
+  children?: React.ReactNode;
+}
+
+interface HeaderProps {
+  page: string;
+  isWide: boolean;
+}
+
+function ElementosComunes(props: ElementosComunesProps) {
+  const { children, isWide } = props;
   return (
     <header>
-      <div className='headerLogoContainer'>
-        <Logo />
+      <div className="header-logo-container">
+        {isWide ? <WideLogo /> : <NarrowLogo />}
       </div>
-      <div className="headerContainer">
-        <div className='headerLinks'>
-          {props.valor === "Home" ? <Button value="Home" className="nav-button" id="activo"/> : <Button value="Home" className="nav-button" />}
-          {props.valor === "About us" ? <Button value="About us" className="nav-button" id="activo"/> : <Button value="About us" className="nav-button" />}
-          {props.valor === "Reports" ? <Button value="Reports" className="nav-button" id="activo"/> : <Button value="Reports" className="nav-button" />}
-        </div>
-        <div className="linea"></div>
-        <input type="button" value="Login" className="login-button" />
-      </div>
+      <div className="header-container">{children}</div>
     </header>
   );
+}
+
+const Header = (props: HeaderProps) => {
+  const { page, isWide } = props;
+
+  const renderButtons = (activePage: string) => {
+    const token = useContext(SessionContext);
+    console.log(localStorage.getItem("token"));
+    console.log(token);
+    return (
+      <div className="header-links">
+        <Button
+          page="/"
+          value="Home"
+          className={page === "Home" ? "active-page" : "nav-button"}
+        />
+        <Button
+          page="/aboutus"
+          value="About us"
+          className={activePage === "About us" ? "active-page" : "nav-button"}
+        />
+        {token && (
+          <Button
+            page="/reports"
+            value="Reports"
+            className={activePage === "Reports" ? "active-page" : "nav-button"}
+          />
+        )}
+      </div>
+    );
+  };
+
+  switch (page) {
+    case "Home":
+      return (
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("Home")}
+        </ElementosComunes>
+      );
+    case "About us":
+      return (
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("About us")}
+          <div className="linea"></div>
+          <LoginButton text="Login" color="#3C85DB" />
+        </ElementosComunes>
+      );
+    case "Reports":
+      return (
+        <ElementosComunes isWide={isWide}>
+          {renderButtons("Reports")}
+        </ElementosComunes>
+      );
+    default:
+      return null; // Handle unknown page gracefully
+  }
 };
 
 export default Header;

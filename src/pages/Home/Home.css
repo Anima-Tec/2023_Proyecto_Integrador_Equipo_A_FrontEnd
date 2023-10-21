@@ -1,76 +1,104 @@
-.homeContainer {
-    position: relative;
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-  }
-
-  .homeContent{
-    display: flex;
-    flex-direction: row;
-  }
-  
-.contentContainer {
-  color: #000;
-  background-color: #3c85db;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-bottom-left-radius: 3rem;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  height: 90%;
-  margin: 3rem;
-  margin-top: 10%;
-}
-
-.contentWelcome {
+.home {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.contentWelcome p,
-.contentWelcome h2 {
+.home-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-section {
+  flex: 1;
+  border-top: 1px;
+  border-top-style: solid;
+  border-top-color: white;
+  background-color: var(--franceBlue);
+  border-bottom-left-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  color: #000;
+  background-color: white;
+  grid-area: content;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 86%;
+  margin: 3rem;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.content-welcome {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+
+.content-welcome > h2 {
+  font-family: "Courier Prime", monospace;
+  font-size: 35px;
   margin: 3rem;
   color: black;
 }
 
-.contentNavLine {
+.content-welcome > p {
+  font-family: "Encode Sans Expanded", sans-serif;
+  margin: 3rem;
+  font-size: var(--pFontSize);
+  color: black;
+}
+
+.content-navLine {
   border: 0.01rem solid #000;
   width: 0rem;
   height: 10rem;
 }
 
-.contentNav {
+.content-nav {
   background-color: rgb(234, 234, 234);
   margin: 3rem;
   height: 80%;
+  width: 40%;
   border-top-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.contentNav img {
+.content-nav > img {
   height: fit-content;
   width: fit-content;
   margin-right: 3rem;
 }
 
-.contentNav nav {
+.content-nav > nav {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   justify-content: center;
 }
 
-.contentNav nav a {
+.content-nav > nav > a {
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 13px;
   text-decoration: none;
   color: rgb(74, 81, 87);
   margin: 1rem;

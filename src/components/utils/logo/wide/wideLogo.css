@@ -1,32 +1,28 @@
-.logo {
+.wide-logo>img {
+    width: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+
+.wide-logo>h1 {
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1rem;
+    font-size: 20px;
+}
+
+.wide-logo>h1>span {
+    font-weight: 100;
+    font-family: 'Archivo', sans-serif;
+}
+
+.wide-logo {
+    width: 29rem;
     background-color: black;
     height: 100%;
-    border-radius: 0 5rem 0 0;
+    border-radius: 0 15rem 0 0;
     display: flex;
     justify-content: left;
     align-items: center;
-}
-.logo img {
-        width: clamp(1rem, 2vw, 2rem);
-        margin-left: 1.5rem;
-    }
-
-@media screen and (max-width: 768px) {
-    .logo h1{
-       display: none;
-    }
-    .logo {
-        width: 5rem;
-    }
-}
-@media screen and (min-width: 768px) {
-    .logo h1{
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        margin-left: 1rem;
-        font-size: clamp(7.2px, 1.35vw, 18px);
-    }
-    .logo {
-        width: clamp(15rem, 30vw, 25rem);
-    }
+    padding: 0.5rem 0 0.5rem 0;
 }

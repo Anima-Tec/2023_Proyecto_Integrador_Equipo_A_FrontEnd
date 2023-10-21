@@ -1,19 +1,22 @@
-.logo {
-    background-color: black;
-    height: 100%;
-    border-radius: 0 5rem 0 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.narrow-logo>img {
+  width: 2.5rem;
+  margin-left: 1.5rem;
 }
-.logo img {
-        width: clamp(1rem, 2vw, 2rem);
-        margin-left: 1.5rem;
-    }
-    .logo h1{
-       display: none;
-    }
-    .logo {
-        width: 5rem;
-    }
 
+.narrow-logo>h1 {
+  font-weight: bold;
+  font-family: "Encode Sans Expanded", sans-serif;
+  margin-left: 1rem;
+  font-size: 20px;
+}
+
+.narrow-logo {
+  background-color: black;
+  height: 100%;
+  border-radius: 0 15rem 0 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.3rem 0 0.3rem 0;
+  width: 12rem;
+}

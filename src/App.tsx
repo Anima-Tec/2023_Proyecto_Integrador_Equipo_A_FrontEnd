@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import './App.css'
 import React from 'react';
+import Footer from './components/footer/Footer';
 import Home from './pages/Home/Home';
-import Footer from './components/footer/Footer'
-
 
 function App() {
   return (
