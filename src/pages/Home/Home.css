@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100vh;
 }
+
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -33,9 +34,8 @@
   background-color: white;
   grid-area: content;
   display: flex;
-  flex-direction: row;
   width: 100%;
-  height: 86%;
+  height: calc(100% - 6rem);
   margin: 3rem;
 
   justify-content: center;
@@ -50,14 +50,14 @@
   height: 80%;
 }
 
-.content-welcome > h2 {
+.content-welcome>h2 {
   font-family: "Courier Prime", monospace;
   font-size: 35px;
   margin: 3rem;
   color: black;
 }
 
-.content-welcome > p {
+.content-welcome>p {
   font-family: "Encode Sans Expanded", sans-serif;
   margin: 3rem;
   font-size: var(--pFontSize);
@@ -83,20 +83,20 @@
   align-items: center;
 }
 
-.content-nav > img {
+.content-nav>img {
   height: fit-content;
   width: fit-content;
   margin-right: 3rem;
 }
 
-.content-nav > nav {
+.content-nav>nav {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   justify-content: center;
 }
 
-.content-nav > nav > a {
+.content-nav>nav>a {
   font-family: "Encode Sans Expanded", sans-serif;
   font-size: 13px;
   text-decoration: none;

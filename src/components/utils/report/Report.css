@@ -20,7 +20,7 @@
   justify-content: right;
 }
 
-.img > img {
+.img>img {
   border-radius: 30px 30px 10px 10px;
   width: 100%;
   max-height: min-content;
@@ -29,6 +29,7 @@
 
 .remitente {
   display: flex;
+  text-decoration: none;
   border-radius: 0 30px 0 15px;
   position: absolute;
   align-items: center;
@@ -40,7 +41,7 @@
   background-color: white;
 }
 
-.remitente > p {
+.remitente>p {
   width: 80%;
   margin-left: 5%;
   overflow: hidden;
@@ -49,7 +50,7 @@
   font-size: 13px;
 }
 
-.remitente > img {
+.remitente>img {
   border-radius: 50%;
   overflow: hidden;
   width: auto;
@@ -70,7 +71,7 @@
 
 .card-text {
   flex: 1;
-
+  text-decoration: none;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -86,9 +87,10 @@
   justify-content: left;
 }
 
-.card-text > h3 {
+.card-text>h3 {
   margin: 1rem;
   height: 1rem;
+  text-decoration: none;
   overflow: hidden;
   font-family: "Encode Sans Expanded", sans-serif;
   font-size: 15px;
@@ -96,9 +98,10 @@
   color: black;
 }
 
-.card-text > p {
+.card-text>p {
   word-wrap: break-word;
   overflow: hidden;
+  text-decoration: none;
   margin: 0 1rem 0 1rem;
   height: 2rem;
   font-family: "Encode Sans Expanded", sans-serif;
@@ -152,15 +155,19 @@
   align-items: center;
   justify-content: left;
 }
+
 .new-status-span {
   background-color: #22f962;
 }
+
 .new-status-span {
   background-color: #c0f426;
 }
+
 .new-status-span {
   background-color: #4d36ff;
 }
+
 .new-status-span {
   background-color: #600000;
 }

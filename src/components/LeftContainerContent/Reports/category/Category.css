@@ -19,7 +19,7 @@
   height: 3.5rem;
 }
 
-.category > span:hover {
+.category>span:hover {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: var(--franceBlue);

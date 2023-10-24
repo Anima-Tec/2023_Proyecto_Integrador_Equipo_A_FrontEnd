@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=Urbanist:wght@500&display=swap');
 
-.comunities {
-    height: 100%;
+.communities {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    height: 100%;
+}
+
+.communities-container {
+    flex: 12;
+    width: 100%;
+    overflow: -moz-hidden-unscrollable;
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
     flex-direction: column;
 }
 
-.comunity>* {
-    margin-bottom: 1rem;
+.communities>a {
+    flex: 2;
+}
+
+.communities-title {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 27px;
 }

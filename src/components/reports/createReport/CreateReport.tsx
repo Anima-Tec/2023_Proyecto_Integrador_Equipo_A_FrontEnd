@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { SessionContext } from "../../../context/SessionContext";
 
 const CreateReport = (props: any) => {
-  console.log(localStorage.getItem("token"));
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedUrgency, setSelectedUrgency] = useState<number | null>(2);
@@ -14,21 +13,24 @@ const CreateReport = (props: any) => {
   const [user, setUser] = useState<any>(null);
   const [imageUploaded, setImageUploaded] = useState(false);
   const token = useContext(SessionContext);
+  const [labelBool, setLabelBool] = useState(false);
+  const idCommunity = parseInt(props.communityId);
+
   useEffect(() => {
-    fetch("http://localhost:3000/user", {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}user`, {
       method: "GET",
       headers: {
+        "Content-Type": "application/json",
         authorization: token,
       },
     })
       .then((response) => {
         if (response.status === 404) {
-          console.log(response.status);
+          localStorage.setItem("token", "");
           navigate("/");
         }
-        console.log(response.status);
         if (response.status === 401) {
-          console.log(response.status);
+          localStorage.setItem("token", "");
           navigate("/");
         }
 
@@ -43,6 +45,8 @@ const CreateReport = (props: any) => {
   }, [navigate]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setImageUploaded(false);
+    setLabelBool(true);
     const file = e.target.files?.[0];
     if (file) {
       const imageUrl = URL.createObjectURL(file);
@@ -50,7 +54,7 @@ const CreateReport = (props: any) => {
 
       const formData = new FormData();
       formData.append("image", file);
-      const apikey = "22506ddcbf0bd3f3e3dcc5f2eae87815";
+      const apikey = "ba4797a73c15b7a29f73a5098a7704fb";
 
       fetch(`https://api.imgbb.com/1/upload?key=${apikey}`, {
         method: "POST",
@@ -104,21 +108,25 @@ const CreateReport = (props: any) => {
       urgency: urgencyText[selectedUrgency],
       image: imageLink,
       idUser: user,
+      idCommunity: idCommunity,
     };
 
     try {
-      console.log(requestBody);
-      const response = await fetch("http://localhost:3000/reports", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
-
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}reports`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: token,
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
+      console.log(response.status);
       if (response.status === 201) {
         const newReport = await response.json();
-        navigate("/reports");
+        navigate(`/communities/${idCommunity}`);
       } else {
         console.error("Error al crear el informe");
       }
@@ -212,7 +220,7 @@ const CreateReport = (props: any) => {
                   onChange={handleImageChange}
                   required
                 />
-                {!imageUploaded ? "ADD AN IMAGE" : ""}
+                {!labelBool ? "UPLOAD AN IMAGE" : ""}
               </label>
             </div>
             <div className="report-create-bottom">
@@ -220,6 +228,7 @@ const CreateReport = (props: any) => {
                 type="submit"
                 className="report-create-submit"
                 value="Create"
+                disabled={!imageUploaded}
               />
             </div>
           </form>

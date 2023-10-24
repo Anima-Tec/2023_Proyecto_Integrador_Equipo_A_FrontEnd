@@ -14,10 +14,12 @@
   flex: 2;
   display: flex;
 }
+
 .report-create-mid {
   flex: 11;
   display: flex;
 }
+
 .report-create-bottom {
   flex: 2;
   display: flex;
@@ -39,6 +41,7 @@
   font-family: "Archivo", sans-serif;
   border-color: #3b3b3b;
 }
+
 .report-create-title::placeholder {
   color: #3b3b3b;
 
@@ -136,7 +139,7 @@ input[type="file"] {
   display: none;
 }
 
-.radio-inputs > .radio > .name {
+.radio-inputs>.radio>.name {
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -151,10 +154,11 @@ input[type="file"] {
   transition: all 0.15s ease-in-out;
 }
 
-.radio-inputs > .radio > input:checked + .name {
+.radio-inputs>.radio>input:checked+.name {
   background-color: #fff;
   font-weight: 700;
 }
+
 #low-urg {
   color: #1ccc51;
 }
@@ -198,6 +202,10 @@ input[type="file"] {
   height: 92%;
   text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
   transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.report-create-submit:disabled {
+  background-color: #7a7a7a;
 }
 
 .report-create-submit:hover {

@@ -1,0 +1,183 @@
+.report-show {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    height: 80%;
+    width: 60%;
+    display: flex;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3b3b3b;
+    flex-direction: column;
+}
+
+.report-show-top {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.report-show-mid {
+    flex: 10;
+    display: flex;
+}
+
+.report-show-bottom {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.report-show-title {
+    flex: 10;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 3% 3% 0 5%;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    background-color: #d9d9d9;
+    border-width: 1px;
+    font-family: "Archivo", sans-serif;
+    border-color: #3b3b3b;
+}
+
+.report-show-creation {
+    text-align: center;
+    flex: 1;
+    margin: 3% 5% 0 3%;
+    font-family: "Archivo", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.report-show-description {
+    margin: 3% 3% 3% 5%;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: calc(50% - (5% + 3px));
+    font-size: 22px;
+    color: black;
+    background-color: #d9d9d9;
+    font-family: "Archivo", sans-serif;
+    position: relative;
+}
+
+.report-show-line {
+    width: 1px;
+    background-color: black;
+    height: 82%;
+    margin: 4% 0 12% 0;
+}
+
+.report-show-image {
+    margin: 3% 5% 3% 3%;
+    border-radius: 1rem;
+    width: calc(50% - (5% + 3px));
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3b3b3b;
+    border-radius: 1rem;
+}
+
+.radio-show-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 6;
+    height: 80%;
+    margin: 0 5% 0 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3b3b3b;
+    border-radius: 1rem;
+    background-color: #d9d9d9;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+}
+
+.radio-show-inputs .show-radio {
+    flex: 1 1 auto;
+    text-align: center;
+
+    margin: 0.25rem;
+}
+
+.radio-show-inputs .show-radio input {
+    display: none;
+}
+
+.radio-show-inputs>.show-radio>.radio-show-status-name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: none;
+    height: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    transition: all 0.15s ease-in-out;
+}
+
+.radio-show-inputs>.show-radio>input:checked+.radio-show-status-name {
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.report-show-submit {
+    flex: 2;
+    font-size: var(--pFontSize);
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    margin: 0 5% 0 0;
+    cursor: pointer;
+    border-radius: 1rem;
+    will-change: box-shadow, transform;
+    background: var(--franceBlue);
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%),
+        0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
+        inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    font-weight: bold;
+    color: #fff;
+    height: 80%;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.report-show-submit:disabled {
+    background-color: #7a7a7a;
+}
+
+.report-show-submit:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+}
+
+
+
+
+
+#new-status {
+    color: rgb(0, 226, 0);
+}
+
+#inProgress-status {
+    color: rgb(51, 54, 253);
+}
+
+#inValidation-status {
+    color: rgb(0, 141, 99);
+}
+
+#closed-status {
+    color: rgb(7, 0, 44);
+}

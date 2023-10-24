@@ -6,10 +6,11 @@ import Register from "../LeftContainerContent/Home/register/Register.js";
 import Communities from "../LeftContainerContent/Home/comunity/Communities.js";
 import "./LeftContainer.css";
 import Category from "../LeftContainerContent/Reports/category/Category.js";
+import NewCommunity from "../LeftContainerContent/Home/comunity/newCommunity/NewCommunity.js";
 
-function WideLeftContainer(props: any) {
+function LeftContainer(props: any) {
   const valor = props.valor;
-  const isWide = props.isWide;
+  const communityId = props.communityId;
   switch (valor) {
     case "Login": {
       return (
@@ -35,10 +36,17 @@ function WideLeftContainer(props: any) {
     case "Reports": {
       return (
         <div className="left-container" id="narrow-left-container">
-          <Category />
+          <Category communityId={communityId} />
+        </div>
+      );
+    }
+    case "NewCommunity": {
+      return (
+        <div className="left-container" id="wide-left-container">
+          <Category communityId={communityId} />
         </div>
       );
     }
   }
 }
-export default WideLeftContainer;
+export default LeftContainer;

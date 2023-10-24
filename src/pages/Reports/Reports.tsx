@@ -5,9 +5,12 @@ import LeftContainer from "../../components/left-container/LeftContainer";
 import "./Reports.css";
 import ShowReports from "../../components/reports/showReports/ShowReports";
 import CreateReport from "../../components/reports/createReport/CreateReport";
+import { useParams } from "react-router-dom";
+import ShowReport from "../../components/reports/showReport/ShowReport";
 
 interface ElementosComunesProps {
   children?: React.ReactNode;
+  communityId?: String;
 }
 
 interface ReportsProps {
@@ -20,7 +23,7 @@ function ElementosComunes(props: ElementosComunesProps) {
       <div className="reports">
         <Header isWide={false} page="Reports" />
         <div className="reports-content">
-          <LeftContainer valor="Reports" />
+          <LeftContainer valor="Reports" communityId={props.communityId} />
           {props.children}
         </div>
       </div>
@@ -30,18 +33,24 @@ function ElementosComunes(props: ElementosComunesProps) {
 }
 function Reports(props: ReportsProps) {
   const { category } = props;
-
+  const { id } = useParams();
   switch (category) {
-    case "show":
+    case "showAll":
       return (
-        <ElementosComunes>
-          <ShowReports />
+        <ElementosComunes communityId={id}>
+          <ShowReports communityId={id} />
         </ElementosComunes>
       );
     case "new":
       return (
-        <ElementosComunes>
-          <CreateReport />
+        <ElementosComunes communityId={id}>
+          <CreateReport communityId={id} />
+        </ElementosComunes>
+      );
+    case "show":
+      return (
+        <ElementosComunes communityId={id}>
+          <ShowReport idReport={id} />
         </ElementosComunes>
       );
   }

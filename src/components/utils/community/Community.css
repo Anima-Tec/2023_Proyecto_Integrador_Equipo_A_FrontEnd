@@ -1,0 +1,16 @@
+.community {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.community>* {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}

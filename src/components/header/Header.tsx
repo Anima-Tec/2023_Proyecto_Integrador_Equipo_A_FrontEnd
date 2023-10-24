@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Button from "../utils/button/PageNavButton/PageNavButton";
 import WideLogo from "../utils/logo/wide/WideLogo";
-import LoginButton from "../utils/button/AccessButton/AccessButton";
 import "./Header.css";
 import NarrowLogo from "../utils/logo/narrow/NarrowLogo";
 import { SessionContext } from "../../context/SessionContext";
+import { Link } from "react-router-dom";
 
 interface ElementosComunesProps {
   isWide: boolean;
@@ -30,15 +30,13 @@ function ElementosComunes(props: ElementosComunesProps) {
 
 const Header = (props: HeaderProps) => {
   const { page, isWide } = props;
+  const token = useContext(SessionContext);
 
   const renderButtons = (activePage: string) => {
-    const token = useContext(SessionContext);
-    console.log(localStorage.getItem("token"));
-    console.log(token);
     return (
       <div className="header-links">
         <Button
-          page="/"
+          page="/communities"
           value="Home"
           className={page === "Home" ? "active-page" : "nav-button"}
         />
@@ -47,13 +45,6 @@ const Header = (props: HeaderProps) => {
           value="About us"
           className={activePage === "About us" ? "active-page" : "nav-button"}
         />
-        {token && (
-          <Button
-            page="/reports"
-            value="Reports"
-            className={activePage === "Reports" ? "active-page" : "nav-button"}
-          />
-        )}
       </div>
     );
   };
@@ -69,8 +60,18 @@ const Header = (props: HeaderProps) => {
       return (
         <ElementosComunes isWide={isWide}>
           {renderButtons("About us")}
-          <div className="linea"></div>
-          <LoginButton text="Login" color="#3C85DB" />
+          {!token && (
+            <>
+              <div className="linea"></div>
+              <Link to="/">
+                <input
+                  type="submit"
+                  value="Login"
+                  className="login-header-button"
+                />
+              </Link>
+            </>
+          )}
         </ElementosComunes>
       );
     case "Reports":

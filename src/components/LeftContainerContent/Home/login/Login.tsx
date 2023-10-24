@@ -12,18 +12,21 @@ const Login = (props: any) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data.token);
         localStorage.setItem("token", data.token);
+        navigate("/communities");
       } else {
         const errorData = await response.json();
         console.error(errorData.error);

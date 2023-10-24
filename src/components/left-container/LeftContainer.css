@@ -1,6 +1,7 @@
 .left-container {
   display: flex;
   height: 100%;
+  flex-direction: column;
   align-items: center;
   background-color: black;
   color: white;
@@ -13,12 +14,12 @@
   color: #fff;
 }
 
-.register-link > a {
+.register-link>a {
   text-decoration: none;
   color: #3c85db;
 }
 
-.register-link > a:hover {
+.register-link>a:hover {
   color: #fff;
 }
 
@@ -67,8 +68,8 @@
   border: 1.5px solid #1a73e8;
 }
 
-.access-input:focus ~ label,
-.access-input:valid ~ label {
+.access-input:focus~label,
+.access-input:valid~label {
   transform: translateY(-50%) scale(0.8);
   background-color: #212121;
   padding: 0 0.2em;
@@ -84,7 +85,7 @@
   flex-direction: column;
 }
 
-.access-container > h2 {
+.access-container>h2 {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   height: 1rem;
@@ -97,7 +98,7 @@
   justify-content: start;
 }
 
-.password-section > a {
+.password-section>a {
   margin-top: 0.1rem;
   margin-left: 0.8rem;
 }

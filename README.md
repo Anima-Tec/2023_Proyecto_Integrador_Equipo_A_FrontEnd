@@ -1,8 +1,10 @@
-# React + Vite
+# MasFoco App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instrucciones de uso
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clona este repositorio en tu máquina local.
+2. Ve a la raíz del proyecto con `cd .\2023_Proyecto_Integrador_Equipo_A_FrontEnd\`.
+3. Instala las dependencias usando `npm i`.
+4. Asegúrate de tener el servicio mysql levantado y el backend del proyecto.
+5. Ejecuta la aplicación usando `npm run dev`.
+6. La aplicación estará disponible en http://localhost:5173.

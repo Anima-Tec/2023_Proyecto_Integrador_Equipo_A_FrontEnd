@@ -2,6 +2,7 @@ import React from "react";
 // @ts-ignore
 import imagenRemitenteTest from "../../../assets/imagen-remitente.jpeg";
 import "./Report.css";
+import { Link } from "react-router-dom";
 function UrgencyLevel(props: any) {
   const prioridad = props.prioridad;
   switch (prioridad) {
@@ -38,24 +39,27 @@ const Report = (props: any) => {
   const description = props.description;
   const user = props.user;
   const image = props.image;
+  const id = props.id;
   return (
-    <div className="card">
-      <div className="img">
-        <div className="remitente">
-          <img src={imagenRemitenteTest} alt="Imagen del remitente" />
-          <p>{user}</p>
+    <Link to={`/communities/report/${id}`}>
+      <div className="card">
+        <div className="img">
+          <div className="remitente">
+            <img src={imagenRemitenteTest} alt="Imagen del remitente" />
+            <p>{user}</p>
+          </div>
+          <img src={image} alt="Imagen del reporte" />
         </div>
-        <img src={image} alt="Ventana Rota" />
-      </div>
 
-      <div className="card-content">
-        <div className="card-text">
-          <h3>{title}</h3>
-          <p>{description}</p>
+        <div className="card-content">
+          <div className="card-text">
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+          <UrgencyLevel prioridad={urgency} />
         </div>
-        <UrgencyLevel prioridad={urgency} />
       </div>
-    </div>
+    </Link>
   );
 };
 
