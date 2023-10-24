@@ -17,7 +17,7 @@ const CreateReport = (props: any) => {
   const idCommunity = parseInt(props.communityId);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_BASE_URL}user`, {
+    fetch(`http://localhost:3000/user`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -112,17 +112,14 @@ const CreateReport = (props: any) => {
     };
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}reports`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            authorization: token,
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      const response = await fetch(`http://localhost:3000/reports`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: token,
+        },
+        body: JSON.stringify(requestBody),
+      });
       console.log(response.status);
       if (response.status === 201) {
         const newReport = await response.json();

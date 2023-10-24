@@ -1,12 +1,13 @@
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import LeftContainer from "../../components/left-container/LeftContainer";
 import "./Reports.css";
 import ShowReports from "../../components/reports/showReports/ShowReports";
 import CreateReport from "../../components/reports/createReport/CreateReport";
 import { useParams } from "react-router-dom";
 import ShowReport from "../../components/reports/showReport/ShowReport";
+import { SessionContext } from "../../context/SessionContext";
 
 interface ElementosComunesProps {
   children?: React.ReactNode;
@@ -33,7 +34,33 @@ function ElementosComunes(props: ElementosComunesProps) {
 }
 function Reports(props: ReportsProps) {
   const { category } = props;
+  const [report, setReport] = useState();
   const { id } = useParams();
+  const token = useContext(SessionContext);
+  useEffect(() => {
+    async function fetchReport() {
+      try {
+        const response = await fetch(`http://localhost:3000/reports/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: token,
+          },
+        });
+
+        if (!response.ok) {
+          console.error("Error al obtener el informe.");
+          return;
+        }
+
+        const data = await response.json();
+        setReport(data);
+      } catch (error) {
+        console.error("Error al obtener el informe:", error);
+      }
+    }
+    fetchReport();
+  }, [id, token]);
   switch (category) {
     case "showAll":
       return (
@@ -49,7 +76,7 @@ function Reports(props: ReportsProps) {
       );
     case "show":
       return (
-        <ElementosComunes communityId={id}>
+        <ElementosComunes communityId={report.idCommunity}>
           <ShowReport idReport={id} />
         </ElementosComunes>
       );

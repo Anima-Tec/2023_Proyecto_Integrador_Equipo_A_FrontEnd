@@ -18,7 +18,7 @@ const Register = (props: any) => {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}signup", {
+      const response = await fetch("http://localhost:3000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

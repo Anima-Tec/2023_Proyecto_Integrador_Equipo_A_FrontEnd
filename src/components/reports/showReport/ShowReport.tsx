@@ -16,7 +16,7 @@ const ShowReport = (props: any) => {
   useEffect(() => {
     async function fetchUserByToken() {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}user`, {
+        const response = await fetch(`http://localhost:3000/user`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -70,8 +70,6 @@ const ShowReport = (props: any) => {
     }
 
     if (user && report) {
-      console.log(user.id);
-      console.log(report.idCommunity);
       fetchUserRole();
     }
   }, [user, report, token]);

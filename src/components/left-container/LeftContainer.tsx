@@ -43,7 +43,7 @@ function LeftContainer(props: any) {
     case "NewCommunity": {
       return (
         <div className="left-container" id="wide-left-container">
-          <Category communityId={communityId} />
+          <NewCommunity />
         </div>
       );
     }

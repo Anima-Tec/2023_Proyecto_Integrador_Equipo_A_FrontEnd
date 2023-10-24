@@ -3,7 +3,7 @@ import { SessionContext } from "../../../../../context/SessionContext";
 import { Link, useNavigate } from "react-router-dom";
 import "./NewCommunity.css";
 
-const Communities: React.FC = () => {
+const NewCommunity: React.FC = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
   const token = useContext(SessionContext);
@@ -96,4 +96,4 @@ const Communities: React.FC = () => {
   );
 };
 
-export default Communities;
+export default NewCommunity;
