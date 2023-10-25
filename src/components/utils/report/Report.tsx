@@ -1,6 +1,4 @@
 import React from "react";
-// @ts-ignore
-import imagenRemitenteTest from "../../../assets/imagen-remitente.jpeg";
 import "./Report.css";
 import { Link } from "react-router-dom";
 function UrgencyLevel(props: any) {
@@ -45,7 +43,6 @@ const Report = (props: any) => {
       <div className="card">
         <div className="img">
           <div className="remitente">
-            <img src={imagenRemitenteTest} alt="Imagen del remitente" />
             <p>{user}</p>
           </div>
           <img src={image} alt="Imagen del reporte" />
