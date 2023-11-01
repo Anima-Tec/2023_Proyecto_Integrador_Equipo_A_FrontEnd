@@ -2,9 +2,9 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import React from "react";
 // @ts-ignore
-import image1 from "../../assets/aboutus-image.png";
+import image1 from "../../assets/aboutus-image.jpg";
 // @ts-ignore
-import image2 from "../../assets/aboutus-image-0.png";
+import image2 from "../../assets/aboutus-image-0.jpg";
 import "./AboutUs.css";
 function AboutUs() {
   return (
@@ -14,7 +14,7 @@ function AboutUs() {
         <div className="image-text-aboutus">
           <div className="titulo-aboutus">
             <h1>
-              SOBRE <span>NOSOTROS</span>
+              ABOUT <span>US</span>
             </h1>
           </div>
           <div className="empty-blue"></div>
@@ -22,34 +22,17 @@ function AboutUs() {
         <div>
           <div className="aboutus-desc">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              convallis neque mauris, at mattis augue consequat non. Maecenas
-              sodales, felis sit amet mattis efficitur, libero tortor convallis
-              enim, ut iaculis justo felis aliquam dolor. Sed vitae finibus
-              magna, in luctus sapien. Mauris pharetra pretium mauris, elementum
-              interdum nibh. Aliquam vehicula dictum felis sed pellentesque.
-              Aenean blandit ipsum ac lorem imperdiet, quis bibendum justo
-              gravida. Sed consectetur lectus a justo mattis sollicitudin. Donec
-              bibendum magna hendrerit risus mollis lobortis. Nunc turpis velit,
-              vulputate eget ante ut, molestie elementum purus. Integer ultrices
-              sem ipsum, eu porttitor sem pellentesque vitae.
-              <br />
-              Curabitur in sapien tortor. Curabitur convallis sapien ac augue
-              ornare ullamcorper. In et dui ac ante dapibus lobortis. Ut porta
-              turpis nec finibus laoreet. Sed consequat pellentesque turpis
-              finibus hendrerit. Maecenas faucibus luctus mi et efficitur. Donec
-              eu tincidunt nisl.
-              <br />
-              Suspendisse convallis venenatis diam, eu suscipit dui gravida eu.
-              Integer risus augue, volutpat a velit quis, elementum placerat
-              magna. Donec sodales posuere leo vel suscipit. Ut tortor leo,
-              pharetra ut placerat vel, mattis vel nisi. Morbi commodo sit amet
-              risus et molestie. Vivamus at sagittis arcu. Fusce hendrerit et
-              neque eu pellentesque. Duis nec dui at leo lacinia viverra vitae
-              ac urna. Aliquam sodales urna mauris, et vehicula nisi bibendum
-              eget. Quisque at massa cursus, tristique dolor non, posuere magna.
-              Maecenas lacinia rutrum felis eget feugiat. Quisque tempus metus
-              eget neque pellentesque luctus.
+              The fact that society lacks a channel through which citizens and
+              organizational entities, both state and private, can communicate,
+              causes the gap between perceiving a problem and acting accordingly
+              to widen more and more. What do we mean when we talk about this
+              gap? We all know of some streets in poor condition, inaccessible
+              intersections, an educational institution with significant
+              structural damage, teachers who delay students' learning process,
+              and so on. The fact that we do not communicate these issues,
+              whether due to a lack of means, not being assertive, or simply the
+              need to unite as a collective to have a stronger voice, makes
+              improvement increasingly distant.
             </p>
           </div>
         </div>
@@ -57,50 +40,47 @@ function AboutUs() {
           <div className="aboutus-image-text-blue">
             <img src={image1} alt="Imagen 1" className="aboutus-image" />
             <div className="aboutus-text">
-              <h2 className="aboutus-text-title">
-                Suspendisse convallis venenatis
-              </h2>
+              <h2 className="aboutus-text-title">+FOCO</h2>
               <p className="aboutus-text-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas convallis neque mauris, at mattis augue consequat non.
-                Maecenas sodales, felis sit amet mattis efficitur, libero tortor
-                convallis enim, ut iaculis justo felis aliquam dolor. Sed vitae
-                finibus magna, in luctus sapien. Mauris pharetra pretium mauris,
-                elementum interdum nibh. Aliquam vehicula dictum felis sed
-                pellentesque. Aenean blandit ipsum ac lorem imperdiet, quis
-                bibendum justo gravida. Suspendisse convallis venenatis diam, eu
-                suscipit dui gravida eu. Integer risus augue, volutpat a velit
-                quis, elementum placerat magna. Donec sodales posuere leo vel
-                suscipit. Ut tortor leo, pharetra ut placerat vel, mattis vel
-                nisi. Morbi commodo sit amet risus et molestie. Vivamus at
-                sagittis arcu. Fusce hendrerit et neque eu pellentesque. Duis
-                nec dui at leo lacinia viverra vitae ac urna. Aliquam sodales
-                urna mauris, et vehicula nisi bibendum eget. Quisque at massa
-                cursus, tristique dolor non, posuere magna.
+                +FOCO offers a reporting service developed through a web
+                application. Our focus is on companies, communities, and
+                educational institutions; therefore, the service is specifically
+                aimed at improving coexistence within these groups by
+                facilitating communication between the parties and achieving the
+                centralization and organization of the given information. It is
+                based on a system where users from each institution can express
+                concerns and/or demands, whether they are social issues or
+                infrastructure-related matters within their establishment.
+                <br />
+                <br />
+                Mission: Provide all companies in Uruguay with an application
+                that allows their users to express their grievances, issues, or
+                doubts related to the institution in order to enhance the
+                coexistence among all. It's also aimed at governmental
+                organizations so that users can also comment on public spaces,
+                making them more inclusive and welcoming to everyone.
+                <br />
+                <br />
+                Vision: To be the most sought-after reporting service at a
+                national level, thereby facilitating internal communication for
+                societies, departmental bodies, and others.
               </p>
             </div>
           </div>
         </div>
         <div className="aboutus-image-text-black">
           <div className="aboutus-text">
-            <h2 className="aboutus-text-title"> Maecenas sodales</h2>
+            <h2 className="aboutus-text-title"> Clients</h2>
             <p className="aboutus-text-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              convallis neque mauris, at mattis augue consequat non. Maecenas
-              sodales, felis sit amet mattis efficitur, libero tortor convallis
-              enim, ut iaculis justo felis aliquam dolor. Sed vitae finibus
-              magna, in luctus sapien. Mauris pharetra pretium mauris, elementum
-              interdum nibh. Aliquam vehicula dictum felis sed pellentesque.
-              Aenean blandit ipsum ac lorem imperdiet, quis bibendum justo
-              gravida. Suspendisse convallis venenatis diam, eu suscipit dui
-              gravida eu. Integer risus augue, volutpat a velit quis, elementum
-              placerat magna. Donec sodales posuere leo vel suscipit. Ut tortor
-              leo, pharetra ut placerat vel, mattis vel nisi. Morbi commodo sit
-              amet risus et molestie. Vivamus at sagittis arcu. Fusce hendrerit
-              et neque eu pellentesque. Duis nec dui at leo lacinia viverra
-              vitae ac urna. Aliquam sodales urna mauris, et vehicula nisi
-              bibendum eget. Quisque at massa cursus, tristique dolor non,
-              posuere magna.
+              +FOCO is aimed at user communities, whether they are businesses,
+              residential complexes, educational institutions, or institutional
+              departments such as the municipality. To carry out this
+              segmentation, we employ a psychographic segmentation criterion.
+              The goals of the institutions interested in our service are to
+              provide a higher quality, comfortable, and stable space and
+              environment for the members of their institution. Additionally,
+              there's a focus on improving the infrastructure of the location
+              itself or public spaces in the case of institutional departments.
             </p>
           </div>
           <img src={image2} alt="Imagen 2" className="aboutus-image" />

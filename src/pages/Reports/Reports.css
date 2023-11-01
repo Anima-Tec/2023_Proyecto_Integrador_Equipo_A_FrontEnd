@@ -1,10 +1,5 @@
 .reports-container {
-  padding: 3rem;
-  border: 0 solid white;
-  border-top-width: 1px;
-  min-height: calc(100vh - 12rem);
   background-color: var(--franceBlue);
-  border-bottom-left-radius: 40px;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -21,4 +16,58 @@
   display: flex;
   border: 0 solid white;
   flex-direction: column;
+}
+.report-categories {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 2rem;
+  margin: 0 5% 0 5%;
+  border-style: none;
+  background: none;
+  font-size: 14px;
+}
+.report-categoties .category-radio {
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 0.25rem;
+}
+.rightPart {
+  border: 0 solid white;
+  border-top-width: 1px;
+  background-color: var(--franceBlue);
+  min-height: calc(100vh - 12rem);
+  border-bottom-left-radius: 40px;
+  flex: 1;
+  padding: 3rem;
+}
+
+.report-categories .category-radio input {
+  display: none;
+}
+.category-radio {
+  padding: 5px;
+}
+.radio-category-name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: none;
+  height: 100%;
+  padding: 5px 10px 5px 10px;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  font-family: "Archivo", sans-serif;
+  transition: all 0.15s ease-in-out;
+}
+.report-categories > .category-radio > input:checked + .radio-category-name {
+  background-color: #fff;
+  color: var(--franceBlue);
+  font-weight: 700;
 }

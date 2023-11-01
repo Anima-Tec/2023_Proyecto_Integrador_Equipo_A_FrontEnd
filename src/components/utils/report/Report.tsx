@@ -2,8 +2,8 @@ import React from "react";
 import "./Report.css";
 import { Link } from "react-router-dom";
 function UrgencyLevel(props: any) {
-  const prioridad = props.prioridad;
-  switch (prioridad) {
+  const urgency = props.urgency;
+  switch (urgency) {
     case "Low":
       return (
         <div className="low-urgency-box">
@@ -41,6 +41,9 @@ const Report = (props: any) => {
   return (
     <Link to={`/communities/report/${id}`}>
       <div className="card">
+        <div className="relevance">
+          <input type="button" className="relevance-inp" value="FOCO" />
+        </div>
         <div className="img">
           <div className="remitente">
             <p>{user}</p>
@@ -53,7 +56,7 @@ const Report = (props: any) => {
             <h3>{title}</h3>
             <p>{description}</p>
           </div>
-          <UrgencyLevel prioridad={urgency} />
+          <UrgencyLevel urgency={urgency} />
         </div>
       </div>
     </Link>

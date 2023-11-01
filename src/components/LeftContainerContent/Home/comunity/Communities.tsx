@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../../../../context/SessionContext";
 import { Link, useNavigate } from "react-router-dom";
 import "./Communities.css";
+import CommunityBackgroundDef from "./../../../../assets/communitybackground.jpg";
 import Community from "../../../utils/community/Community";
 interface Community {
   id: number;
@@ -86,10 +87,7 @@ const Communities: React.FC = () => {
           {communities.map((community) => (
             <Community
               name={community.name}
-              image={
-                community.image ||
-                "https://i.ibb.co/McBwWhd/3520e0a8abd0df261676da0d616d88b2.jpg"
-              }
+              image={community.image || CommunityBackgroundDef}
               communityId={community.id}
               className="community"
             />

@@ -40,7 +40,8 @@ function Reports(props: ReportsProps) {
   useEffect(() => {
     async function fetchReport() {
       try {
-        const response = await fetch(`http://localhost:3000/reports/${id}`, {
+        console.log(token);
+        const response = await fetch(`http://localhost:3000/reports/1`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -76,9 +77,12 @@ function Reports(props: ReportsProps) {
       );
     case "show":
       return (
-        <ElementosComunes communityId={report.idCommunity}>
-          <ShowReport idReport={id} />
-        </ElementosComunes>
+        <>
+          {console.log(report)}
+          <ElementosComunes communityId={"1"}>
+            <ShowReport idReport={id} />
+          </ElementosComunes>
+        </>
       );
   }
 }

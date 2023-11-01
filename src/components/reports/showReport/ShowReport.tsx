@@ -12,7 +12,7 @@ const ShowReport = (props: any) => {
   const [user, setUser] = useState<any>(null);
   const token = useContext(SessionContext);
   const [userRole, setUserRole] = useState<string | null>(null); // Nuevo estado
-
+  console.log(token);
   useEffect(() => {
     async function fetchUserByToken() {
       try {
@@ -69,10 +69,10 @@ const ShowReport = (props: any) => {
       }
     }
 
-    if (user && report) {
+    if (user && report && token) {
       fetchUserRole();
     }
-  }, [user, report, token]);
+  }, [report]);
 
   useEffect(() => {
     async function fetchReport() {

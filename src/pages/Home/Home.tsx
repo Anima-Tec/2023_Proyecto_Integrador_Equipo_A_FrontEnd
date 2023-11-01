@@ -17,11 +17,11 @@ function Home(props: any) {
               <div className="content-welcome">
                 <h2>Welcome to +FOCO</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas convallis neque mauris, at mattis augue consequat
-                  non. Maecenas sodales, felis sit amet mattis efficitur, libero
-                  tortor convallis enim, ut iaculis justo felis aliquam dolor.
-                  Sed vitae finibus magna, in luctus sapien.
+                  +FOCO, a reporting website created for societies, ranging from
+                  educational institutions, companies, institutional
+                  organizations, to even residential complexes. With the aim of
+                  promoting effective communication and productivity for
+                  problem-solving
                 </p>
               </div>
               <div className="content-nav">
